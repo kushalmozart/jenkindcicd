@@ -5,22 +5,22 @@ files:
   - source: script/newcode
     destination: /var/www/html
 permissions:
-  - object: /var/www/
+  - object: /var/www/html
     owner: root
     group: root
     mode: 777
 hooks:
   BeforeInstall:
-    - location: ./script/install_dependencies.sh
+    - location: script/install_dependencies.sh
       timeout: 301
-      runas: ec2-user
+      runas: root
   AfterInstall:
-    - location: ./script/install_dependencies01.sh
+    - location: script/install_dependencies01.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
   ApplicationStart:
-    - location: ./script/start_server.sh
+    - location: script/start_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
 
