@@ -2,18 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: scripts/newcode
-    destination: /var/www/html/
-permissions:
-  - object: /var/www/html/
-    pattern: "**"
-    owner: root
-    mode: 777
+    destination: /var/www/html
 hooks:
   BeforeInstall:
-    - location: ./install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
-      mode: 777
   AfterInstall:
     - location: scripts/change_permissions.sh
       timeout: 300
