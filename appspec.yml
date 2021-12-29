@@ -1,26 +1,19 @@
-#testing webhook
 version: 0.0
 os: linux
 files:
-  - source: scripts/newcode
-    destination: /var/www/html
-permissions:
-  - object: /var/www/html
-    owner: root
-    group: root
-    mode: 777
+  - source: /
+    destination: /var/www/html/WordPress
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 301
+      timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/install_dependencies01.sh
+    - location: scripts/change_permissions.sh
       timeout: 300
       runas: root
   ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
       runas: root
-
 
