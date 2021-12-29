@@ -1,1 +1,1 @@
-sudo yum install apache2 -y
+sudo yum install -y apache2
