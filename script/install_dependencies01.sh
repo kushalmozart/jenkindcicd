@@ -1,1 +1,1 @@
-apt-get install apache2 -y
+sudo yum install -y apache2
