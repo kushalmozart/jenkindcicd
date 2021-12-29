@@ -7,7 +7,7 @@ files:
 hooks:
   BeforeInstall:
     - location: script/install_dependencies.sh
-      timeout: 300
+      timeout: 301
       runas: root
   AfterInstall:
     - location: script/install_dependencies01.sh
