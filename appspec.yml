@@ -4,6 +4,11 @@ os: linux
 files:
   - source: script/newcode
     destination: /var/www/html
+permissions:
+  - object: /var/www/
+    owner: root
+    group: root
+    mode: 777
 hooks:
   BeforeInstall:
     - location: script/install_dependencies.sh
