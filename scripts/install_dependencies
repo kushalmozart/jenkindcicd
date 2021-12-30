@@ -1,1 +1,1 @@
-sudo yum update apache2
+sudo yum update httpd
