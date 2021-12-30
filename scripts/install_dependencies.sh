@@ -1,1 +1,1 @@
-su - ec2-user -c 'cd /usr/local/nginx/html/node && npm install'
+su - ec2-user -c 'yum update -y'
