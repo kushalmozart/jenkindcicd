@@ -1,4 +1,1 @@
-#!/bin/bash
-source /root/.bash_profile
-cd /var/www/html
-npm install
+su - ec2-user -c 'cd /usr/local/nginx/html/node && npm install'
